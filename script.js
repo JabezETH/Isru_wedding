@@ -7,10 +7,67 @@ if (!config) {
 const openingOverlay = document.getElementById("openingOverlay");
 const openInviteBtn = document.getElementById("openInviteBtn");
 const musicToggleBtn = document.getElementById("musicToggleBtn");
+const nextSectionBtn = document.getElementById("nextSectionBtn");
 const bgMusic = document.getElementById("bgMusic");
 
 let isMusicPlaying = false;
 let autoPlayFallbackBound = false;
+
+function normalizeImageUrl(url) {
+  if (!url) return "";
+  let match = url.match(/drive\.google\.com\/file\/d\/([^/]+)\//);
+  if (match && match[1]) {
+    return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+  }
+  match = url.match(/[?&]id=([^&]+)/);
+  if (url.includes("drive.google.com") && match && match[1]) {
+    return `https://drive.google.com/uc?export=view&id=${match[1]}`;
+  }
+  return url;
+}
+
+function renderHeroCalendar() {
+  const calendar = config.hero.calendar || {};
+  setText("calendarMonth", calendar.month || "");
+  setText("calendarDay", calendar.day || "");
+  setText("calendarYear", calendar.year || "");
+  setText("calendarTime", calendar.time || config.hero.dateLine || "");
+
+  const calendarLink = document.getElementById("calendarLink");
+  if (calendarLink) {
+    calendarLink.textContent = calendar.addToCalendarLabel || "Add To Calendar";
+    calendarLink.href = calendar.addToCalendarUrl || "#";
+  }
+}
+
+function resolveMapUrls(mapConfig) {
+  const explicitOpenUrl = (mapConfig.openUrl || "").trim();
+  const explicitEmbedUrl = (mapConfig.embedUrl || "").trim();
+  const query = (mapConfig.query || "").trim();
+
+  const isEmbeddable =
+    explicitEmbedUrl.includes("output=embed") || explicitEmbedUrl.includes("/maps/embed");
+
+  if (isEmbeddable) {
+    return {
+      embedUrl: explicitEmbedUrl,
+      openUrl: explicitOpenUrl || explicitEmbedUrl
+    };
+  }
+
+  if (query) {
+    const encoded = encodeURIComponent(query);
+    return {
+      embedUrl: `https://www.google.com/maps?q=${encoded}&z=15&output=embed`,
+      openUrl: explicitOpenUrl || `https://www.google.com/maps/search/?api=1&query=${encoded}`
+    };
+  }
+
+  return {
+    embedUrl: explicitEmbedUrl,
+    openUrl: explicitOpenUrl
+  };
+}
 
 function setText(id, value) {
   const el = document.getElementById(id);
@@ -42,7 +99,7 @@ function renderDetails() {
   container.textContent = "";
   for (const item of config.details) {
     const article = document.createElement("article");
-    article.className = "card";
+    article.className = "card reveal";
 
     const title = document.createElement("h4");
     title.textContent = item.title;
@@ -72,6 +129,24 @@ function renderGallery() {
   }
 }
 
+function initRevealAnimations() {
+  const revealItems = document.querySelectorAll(".reveal");
+  if (!revealItems.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.14, rootMargin: "0px 0px -7% 0px" }
+  );
+
+  for (const item of revealItems) observer.observe(item);
+}
+
 function applyConfig() {
   document.title = config.meta.pageTitle;
 
@@ -87,7 +162,22 @@ function applyConfig() {
   setText("openInviteBtn", config.opening.openButtonLabel);
 
   setText("heroEyebrow", config.hero.eyebrow);
-  setText("heroDate", config.hero.dateLine);
+  setText("nextSectionBtn", config.hero.nextSectionLabel || "View Details");
+  renderHeroCalendar();
+
+  const openingCoupleImage = document.getElementById("openingCoupleImage");
+  if (openingCoupleImage) {
+    const configuredImage = normalizeImageUrl(config.resources.heroCoupleImageUrl || "");
+    const fallbackImage =
+      (config.gallery && config.gallery.photos && config.gallery.photos[0] && config.gallery.photos[0].src) ||
+      config.resources.openingBackgroundUrl ||
+      "";
+    openingCoupleImage.onerror = () => {
+      openingCoupleImage.src = fallbackImage;
+    };
+    openingCoupleImage.src = configuredImage || fallbackImage;
+    openingCoupleImage.alt = config.resources.heroCoupleImageAlt || "Couple image";
+  }
 
   setText("inviteHeading", config.invitation.heading);
   setText("inviteBody", config.invitation.body);
@@ -99,15 +189,17 @@ function applyConfig() {
   setText("mapHeading", config.map.heading);
   setText("mapDescription", config.map.description);
 
+  const { embedUrl, openUrl } = resolveMapUrls(config.map || {});
+
   const mapIframe = document.getElementById("mapIframe");
   if (mapIframe) {
     mapIframe.title = config.map.iframeTitle;
-    mapIframe.src = config.map.embedUrl;
+    mapIframe.src = embedUrl;
   }
 
   const mapLink = document.getElementById("mapLink");
   if (mapLink) {
-    mapLink.href = config.map.openUrl;
+    mapLink.href = openUrl;
     mapLink.textContent = config.map.openLabel;
   }
 
@@ -130,6 +222,12 @@ function applyConfig() {
     "--hero-bg-image",
     `url("${config.resources.heroBackgroundUrl}")`
   );
+  document.documentElement.style.setProperty(
+    "--second-bg-image",
+    `url("${config.resources.secondPageBackgroundUrl || config.resources.openingBackgroundUrl}")`
+  );
+
+  initRevealAnimations();
 }
 
 function updateMusicButton() {
@@ -170,6 +268,14 @@ musicToggleBtn.addEventListener("click", async () => {
     await playMusic();
   }
 });
+
+if (nextSectionBtn) {
+  nextSectionBtn.addEventListener("click", () => {
+    const main = document.querySelector("main");
+    if (!main) return;
+    main.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
 
 bgMusic.addEventListener("ended", () => {
   isMusicPlaying = false;

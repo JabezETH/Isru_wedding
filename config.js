@@ -1,11 +1,11 @@
 window.INVITATION_CONFIG = {
   meta: {
-    pageTitle: "እስራዔል እና ሩትሩት | የሰርግ ጥሪጥሪ",
-    description: "ወደ የእስራዔል እና ሩት ሰርግ በአክብሮት ተጠርተዋል"
+    pageTitle: "እስራዔል እና ትንሳዔ | የሰርግ ጥሪ",
+    description: "ወደ የእስራዔል እና ትንሳዔ ሰርግ በአክብሮት ተጠርተዋል"
   },
   couple: {
     partner1: "እስራዔል",
-    partner2: "ሩት",
+    partner2: "ትንሳዔ",
     separator: " እና "
   },
   resources: {
@@ -13,47 +13,58 @@ window.INVITATION_CONFIG = {
     openingBackgroundUrl:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1700&q=80",
     heroBackgroundUrl:
-      "https://images.unsplash.com/photo-1465495976277-4387d4b0d799?auto=format&fit=crop&w=1600&q=80"
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0d799?auto=format&fit=crop&w=1600&q=80",
+    heroCoupleImageUrl:
+      "assets/photo_1_2026-02-18_17-12-32.jpg",
+    heroCoupleImageAlt: "Bride and groom portrait",
+    secondPageBackgroundUrl:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
   },
   opening: {
     eyebrow: "በደስታ",
     subtitle: "በሰርጋችን እንዲታደሙ በአክብሮት ጠርተኖታል",
-    openButtonLabel: "Open Invitation"
+    openButtonLabel: "የጥሪ ካርዶን ይክፈቱ"
   },
   hero: {
-    eyebrow: "Wedding Invitation",
-    dateLine: "ቅዳሜ, ሚያዚያ 12, 2018 - ቀን 8:00 ሰዓት",
-    musicPlayLabel: "Play Music",
-    musicPauseLabel: "Pause Music"
+    eyebrow: "የሰርግ ጥሪ",
+    dateLine: "ቅዳሜ, ሚያዚያ 17, 2018 - ቀን 8:00 ሰዓት",
+    calendar: {
+      month: "ሚያዚያ",
+      day: "17",
+      year: "2018",
+      time: "ቀን 8:00 ሰዓት",
+      addToCalendarLabel: "ወደ ራስዎ የቀን መቁጠሪያ ያስገቡ",
+      addToCalendarUrl:
+        "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration&dates=20260419T170000Z/20260419T220000Z&details=Join+our+wedding+celebration&location=Rose+Garden+Hall+Los+Angeles"
+    },
+    nextSectionLabel: "የጥሪ ካርዱን ዝርዝር ይመልከቱ",
+    musicPlayLabel: "መዝሙሩን ያጫውቱ",
+    musicPauseLabel: "መዝሙሩን ያቁሙ"
   },
   invitation: {
-    heading: "You're Invited",
+    heading: "ተጋብዘዋል!",
     body:
-      "We are grateful to share our special day with our family and friends. Please join us for our ceremony and reception."
+      "ይህንን ቀን አብረውን እንዲያከብሩ ጠርተኖታል"
   },
   details: [
     {
-      title: "Ceremony",
-      lines: ["St. Peter's Chapel", "123 Celebration Avenue", "Los Angeles, CA"]
-    },
-    {
-      title: "Reception",
-      lines: ["Rose Garden Hall", "456 Harmony Street", "Los Angeles, CA"]
+      title: "የቃል ኪዳን ስነ-ስርዓት",
+      lines: ["ጎፋ ማዞሪያ ብርሃነ ወንጌል መጥምቃውያን ቤተክርስቲያን"]
     }
   ],
   gallery: {
-    heading: "Our Moments",
+    heading: "የእስራዔል እና ትንሳኤ",
     photos: [
       {
-        src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80",
+        src: "assets/photo_3_2026-02-18_17-12-32.jpg",
         alt: "Couple smiling together outdoors"
       },
       {
-        src: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+        src: "assets/center-image.jpg",
         alt: "Engagement ring with flowers"
       },
       {
-        src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80",
+        src: "assets/photo_2_2026-02-18_17-12-32.jpg",
         alt: "Couple walking under lights"
       },
       {
@@ -63,16 +74,17 @@ window.INVITATION_CONFIG = {
     ]
   },
   map: {
-    heading: "Venue Map",
-    description: "Use the map to zoom in/out and get directions.",
-    iframeTitle: "Wedding Venue Map",
-    embedUrl: "https://www.google.com/maps?q=Rose+Garden+Hall+Los+Angeles&z=15&output=embed",
-    openUrl: "https://www.google.com/maps/search/?api=1&query=Rose+Garden+Hall+Los+Angeles",
+    heading: "አቅጣጫ",
+    description: "ወደ ቤተክርስቲያን ለመምጣት ካርታውን ይጠቀሙ",
+    iframeTitle: "የቤተክርስቲያን አድራሻ",
+    query: "ጎፋ ማዞሪያ ብርሃነ ወንጌል መጥምቃውያን ቤተክርስቲያን",
+    embedUrl: "https://www.google.com/maps?q=8.98707,38.7514201&z=17&output=embed",
+    openUrl: "https://www.google.com/maps/place/Ethiopian+Berhane+Wongel+Baptist+Church+%7C+Kera+%7C+%E1%8B%A8%E1%8A%A2%E1%89%B5%E1%8B%AE%E1%8C%B5%E1%8B%AB+%E1%89%A5%E1%88%AD%E1%88%83%E1%8A%90+%E1%8B%88%E1%8A%95%E1%8C%8C%E1%88%8D+%E1%88%98%E1%8C%A5%E1%88%9D%E1%89%83%E1%8B%8D%E1%8B%AB%E1%8A%95+%E1%89%A4%E1%89%B0+%E1%8A%AD%E1%88%AD%E1%88%B5%E1%89%B2%E1%8B%AB%E1%8A%95+%7C+%E1%89%84%E1%88%AB+%7C/@8.987029,38.7490274,466m/data=!3m1!1e3!4m6!3m5!1s0x164b8544f1eef263:0xb926dfc694b726ac!8m2!3d8.98707!4d38.7514201!16s%2Fg%2F11shhbm88b?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D",
     openLabel: "Open in Google Maps"
   },
   footer: {
     primary: "We can't wait to celebrate with you.",
-    secondary: "RSVP by June 20, 2026 - +1 (555) 123-4567"
+    secondary: "ሚያዚያ 17 2018"
   },
   system: {
     audioUnsupportedText: "Your browser does not support the audio element."

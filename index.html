@@ -19,6 +19,9 @@
         <p id="openingEyebrow" class="eyebrow"></p>
         <h1 id="openingNames"></h1>
         <p id="openingSubtitle" class="subtitle"></p>
+        <div class="opening-couple-wrap">
+          <img id="openingCoupleImage" src="" alt="" />
+        </div>
         <button id="openInviteBtn" class="btn"></button>
       </div>
     </div>
@@ -31,27 +34,40 @@
     <header class="hero">
       <div class="hero-gradient"></div>
       <div class="container">
-        <p id="heroEyebrow" class="eyebrow"></p>
-        <h2 id="heroNames"></h2>
-        <p id="heroDate" class="hero-date"></p>
+        <p id="heroEyebrow" class="eyebrow hero-animate"></p>
+        <h2 id="heroNames" class="hero-animate"></h2>
+        <div id="heroCalendar" class="hero-calendar hero-animate">
+          <p id="calendarMonth" class="cal-month"></p>
+          <p id="calendarDay" class="cal-day"></p>
+          <p id="calendarYear" class="cal-year"></p>
+          <p id="calendarTime" class="cal-time"></p>
+          <a
+            id="calendarLink"
+            class="calendar-link"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </div>
+        <button id="nextSectionBtn" class="btn btn-outline hero-animate" type="button"></button>
         <button id="musicToggleBtn" class="btn btn-secondary" aria-pressed="false"></button>
       </div>
     </header>
 
     <main>
-      <section class="section container">
+      <section class="section container reveal">
         <h3 id="inviteHeading"></h3>
         <p id="inviteBody"></p>
       </section>
 
-      <section id="detailsGrid" class="section container details-grid"></section>
+      <section id="detailsGrid" class="section container details-grid reveal"></section>
 
-      <section class="section container">
+      <section class="section container reveal">
         <h3 id="galleryHeading"></h3>
         <div id="gallery" class="gallery"></div>
       </section>
 
-      <section class="section container">
+      <section class="section container reveal">
         <h3 id="mapHeading"></h3>
         <p id="mapDescription"></p>
         <div class="map-wrap">

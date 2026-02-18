@@ -11,9 +11,15 @@ Mobile-friendly HTML wedding invitation with:
 ## Files
 
 - `index.html`
+- `alternative-1.html`
+- `alternative-2.html`
 - `styles.css`
+- `alternative-1.css`
+- `alternative-2.css`
 - `config.js`
 - `script.js`
+- `alternative-1.js`
+- `alternative-2.js`
 
 ## Customize
 
@@ -31,6 +37,14 @@ Mobile-friendly HTML wedding invitation with:
 3. Browser autoplay behavior:
    - The page attempts autoplay on load.
    - If a browser blocks autoplay, music starts on the first user interaction.
+
+## Themes
+
+- Original: `index.html`
+- Alternative 1: `alternative-1.html`
+- Alternative 2: `alternative-2.html`
+
+All three themes use the same `config.js`.
 
 ## Host on GitHub Pages
 
