@@ -21,7 +21,7 @@ window.INVITATION_CONFIG = {
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
   },
   opening: {
-    eyebrow: "በደስታ",
+    eyebrow: "የጥሪ ካርድ",
     subtitle: "በሰርጋችን እንዲታደሙ በአክብሮት ጠርተኖታል",
     openButtonLabel: "የጥሪ ካርዶን ይክፈቱ"
   },
