@@ -5,7 +5,7 @@ window.INVITATION_CONFIG = {
   },
   couple: {
     partner1: "እስራዔል",
-    partner2: "ትንሳዔ",
+    partner2: "\nትንሳዔ",
     separator: " እና "
   },
   resources: {
@@ -21,8 +21,8 @@ window.INVITATION_CONFIG = {
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
   },
   opening: {
-    eyebrow: "የጥሪ ካርድ",
-    subtitle: "በሰርጋችን እንዲታደሙ በአክብሮት ጠርተኖታል",
+    eyebrow: "የሰርግ ጥሪ",
+    subtitle: "በሰርጋችን እንዲታደሙ በአክብሮት ጠርተኖታል!",
     openButtonLabel: "የጥሪ ካርዶን ይክፈቱ"
   },
   hero: {
@@ -53,7 +53,7 @@ window.INVITATION_CONFIG = {
     }
   ],
   gallery: {
-    heading: "የእስራዔል እና ትንሳኤ",
+    heading: "እስራዔል እና ትንሳኤ",
     photos: [
       {
         src: "assets/photo_3_2026-02-18_17-12-32.jpg",

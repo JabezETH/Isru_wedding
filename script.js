@@ -101,12 +101,34 @@ function renderDetails() {
     const article = document.createElement("article");
     article.className = "card reveal";
 
+    const header = document.createElement("div");
+    header.className = "detail-header";
+
+    const iconWrap = document.createElement("div");
+    iconWrap.className = "detail-icon-wrap";
+    const icon = document.createElement("img");
+    icon.className = "detail-icon";
+    icon.src = item.iconSrc || "assets/ring.svg";
+    icon.alt = item.iconAlt || "Ring ceremony icon";
+    iconWrap.appendChild(icon);
+    header.appendChild(iconWrap);
+
+    const textWrap = document.createElement("div");
     const title = document.createElement("h4");
     title.textContent = item.title;
-    article.appendChild(title);
+    textWrap.appendChild(title);
+    if (item.subtitle) {
+      const subtitle = document.createElement("p");
+      subtitle.className = "detail-subtitle";
+      subtitle.textContent = item.subtitle;
+      textWrap.appendChild(subtitle);
+    }
+    header.appendChild(textWrap);
+    article.appendChild(header);
 
     for (const line of item.lines) {
       const p = document.createElement("p");
+      p.className = "detail-line";
       p.textContent = line;
       article.appendChild(p);
     }
