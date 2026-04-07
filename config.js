@@ -15,8 +15,10 @@ window.INVITATION_CONFIG = {
     heroBackgroundUrl:
       "https://images.unsplash.com/photo-1465495976277-4387d4b0d799?auto=format&fit=crop&w=1600&q=80",
     heroCoupleImageUrl:
-      "photo_3_2026-04-07_12-16-06.jpg",
+      "assets/photo_6_2026-04-07_12-16-06.jpg",
     heroCoupleImageAlt: "Bride and groom portrait",
+    heroCoupleImageFit: "contain",
+    heroCoupleImagePosition: "center center",
     secondPageBackgroundUrl:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
   },
@@ -54,22 +56,32 @@ window.INVITATION_CONFIG = {
   ],
   gallery: {
     heading: "እስራዔል እና ትንሳኤ",
+    defaultFit: "cover",
+    defaultPosition: "center",
     photos: [
       {
-        src: "assets/photo_6_2026-04-07_12-16-06.jpg",
+        src: "assets/photo_1_2026-04-07_12-16-06.jpg",
+        alt: "Couple portrait in formal attire"
+      },
+      {
+        src: "assets/photo_2_2026-04-07_12-16-06.jpg",
         alt: "Couple smiling together outdoors"
       },
       {
-        src: "assets/center-image.jpg",
-        alt: "Engagement ring with flowers"
+        src: "assets/photo_3_2026-04-07_12-16-06.jpg",
+        alt: "Couple photo shoot moment"
       },
       {
-        src: "photo_5_2026-04-07_12-16-06.jpg",
-        alt: "Couple walking under lights"
+        src: "assets/photo_4_2026-04-07_12-16-06.jpg",
+        alt: "Couple close-up portrait"
       },
       {
-        src: "photo_4_2026-04-07_12-16-06.jpg",
-        alt: "Wedding flowers and decor"
+        src: "assets/photo_5_2026-04-07_12-16-06.jpg",
+        alt: "Couple standing together"
+      },
+      {
+        src: "assets/photo_7_2026-04-07_12-16-06.jpg",
+        alt: "Couple candid moment"
       }
     ]
   },
