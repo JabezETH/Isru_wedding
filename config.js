@@ -15,7 +15,7 @@ window.INVITATION_CONFIG = {
     heroBackgroundUrl:
       "https://images.unsplash.com/photo-1465495976277-4387d4b0d799?auto=format&fit=crop&w=1600&q=80",
     heroCoupleImageUrl:
-      "assets/photo_1_2026-02-18_17-12-32.jpg",
+      "photo_3_2026-04-07_12-16-06.jpg",
     heroCoupleImageAlt: "Bride and groom portrait",
     secondPageBackgroundUrl:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
@@ -56,7 +56,7 @@ window.INVITATION_CONFIG = {
     heading: "እስራዔል እና ትንሳኤ",
     photos: [
       {
-        src: "assets/photo_3_2026-02-18_17-12-32.jpg",
+        src: "assets/photo_6_2026-04-07_12-16-06.jpg",
         alt: "Couple smiling together outdoors"
       },
       {
@@ -64,11 +64,11 @@ window.INVITATION_CONFIG = {
         alt: "Engagement ring with flowers"
       },
       {
-        src: "assets/photo_2_2026-02-18_17-12-32.jpg",
+        src: "photo_5_2026-04-07_12-16-06.jpg",
         alt: "Couple walking under lights"
       },
       {
-        src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80",
+        src: "photo_4_2026-04-07_12-16-06.jpg",
         alt: "Wedding flowers and decor"
       }
     ]
