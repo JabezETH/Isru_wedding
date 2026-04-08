@@ -685,22 +685,23 @@ h2 {
 
   .opening-couple-wrap {
     width: min(85vw, 380px);
-    margin: 0.06rem auto 0.08rem;
+    margin: 0.05rem auto 0.05rem;
     flex: 0 0 auto;
     min-height: 0;
     max-height: none;
-    aspect-ratio: auto;
+    aspect-ratio: 4 / 3;
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
+    overflow: hidden;
+    border-radius: 12px;
   }
 
   #openingCoupleImage {
     order: -1;
     width: 100%;
-    height: auto;
-    max-height: 42dvh;
-    object-fit: contain;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
     object-position: center;
   }
 
@@ -792,16 +793,20 @@ h2 {
   .opening-couple-wrap {
     width: min(78vw, 320px);
     max-height: none;
-    aspect-ratio: auto;
+    aspect-ratio: 16 / 9;
     margin: 0.05rem auto 0.08rem;
     display: flex;
     flex-direction: column;
-    gap: 0.15rem;
+    overflow: hidden;
+    border-radius: 10px;
     flex: 0 0 auto;
   }
 
   #openingCoupleImage {
-    max-height: min(38dvh, 280px);
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
   }
 
   #openInviteBtn {
