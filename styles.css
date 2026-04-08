@@ -122,6 +122,11 @@ h1 {
   color: var(--accent);
 }
 
+#openingNames {
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
 .subtitle {
   margin: 0.4rem 0 1.4rem;
   opacity: 0.85;
@@ -663,6 +668,13 @@ h2 {
 
   h1 {
     font-size: clamp(1.8rem, 10vw, 2.7rem);
+  }
+
+  #openingNames {
+    font-size: clamp(1.55rem, 8.6vw, 2.25rem);
+    line-height: 1.12;
+    margin: 0.1rem 0 0.35rem;
+    padding-inline: 0.2rem;
   }
 
   .subtitle {
