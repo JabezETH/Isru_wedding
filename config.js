@@ -17,8 +17,8 @@ window.INVITATION_CONFIG = {
     heroCoupleImageUrl:
       "assets/photo_4_2026-04-07_12-16-06.jpg",
     heroCoupleImageAlt: "Bride and groom portrait",
-    heroCoupleImageFit: "contain",
-    heroCoupleImagePosition: "center center",
+    heroCoupleImageFit: "cover",
+    heroCoupleImagePosition: "center 28%",
     secondPageBackgroundUrl:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
   },
