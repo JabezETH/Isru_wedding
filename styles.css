@@ -127,6 +127,24 @@ h1 {
   opacity: 0.85;
 }
 
+.opening-verse {
+  margin: -0.4rem auto 1rem;
+  max-width: 92%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.1rem, 4vw, 1.45rem);
+  line-height: 1.35;
+  color: #5a3420;
+}
+
+.opening-verse-note {
+  margin: -0.2rem auto 0.9rem;
+  max-width: 92%;
+  text-align: center;
+  white-space: pre-line;
+  color: #4a2b1c;
+  line-height: 1.4;
+}
+
 .opening-couple-wrap {
   width: clamp(330px, 78vw, 560px);
   margin: 0 auto 1.2rem;
@@ -369,6 +387,38 @@ h2 {
 
 .section h3 {
   font-size: clamp(2rem, 4.2vw, 3rem);
+}
+
+.second-page-verse {
+  margin: 0.9rem 0 0.25rem;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid rgba(156, 90, 47, 0.5);
+  background: rgba(255, 248, 240, 0.62);
+  border-radius: 8px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  line-height: 1.45;
+  color: #43271a;
+}
+
+.second-page-verse-ref {
+  margin: 0.2rem 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.05rem, 3.2vw, 1.25rem);
+  font-weight: 600;
+  color: #6b3a1d;
+}
+
+.hero .second-page-verse {
+  width: min(92%, 560px);
+  margin: 0.2rem auto 0.1rem;
+  text-align: center;
+}
+
+.hero .second-page-verse-ref {
+  width: min(92%, 560px);
+  margin: 0 auto 0.85rem;
+  text-align: left;
 }
 
 .details-grid {
@@ -614,5 +664,17 @@ h2 {
 
   .subtitle {
     margin: 0.3rem 0 0.8rem;
+  }
+
+  .opening-verse {
+    margin: 0.05rem auto 0.7rem;
+    max-width: 98%;
+    font-size: clamp(1rem, 4.6vw, 1.2rem);
+  }
+
+  .opening-verse-note {
+    margin: -0.15rem auto 0.6rem;
+    max-width: 98%;
+    font-size: 0.96rem;
   }
 }

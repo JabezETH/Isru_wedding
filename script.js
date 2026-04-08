@@ -192,6 +192,8 @@ function applyConfig() {
 
   setText("openingEyebrow", config.opening.eyebrow);
   setText("openingSubtitle", config.opening.subtitle);
+  setText("openingVerse", config.opening.bibleVerse || "");
+  setText("openingVerseNote", config.opening.verseNote || "");
   setText("openInviteBtn", config.opening.openButtonLabel);
 
   setText("heroEyebrow", config.hero.eyebrow);
@@ -216,6 +218,17 @@ function applyConfig() {
 
   setText("inviteHeading", config.invitation.heading);
   setText("inviteBody", config.invitation.body);
+  const secondPageVerseEl = document.getElementById("secondPageVerse");
+  const secondPageVerseRefEl = document.getElementById("secondPageVerseRef");
+  const verseText = (config.invitation.verse || "").trim();
+  const verseRef = (config.invitation.verseReference || "").trim();
+  if (secondPageVerseEl) {
+    secondPageVerseEl.textContent = verseRef ? `${verseText}\n${verseRef}` : verseText;
+  }
+  if (secondPageVerseRefEl) {
+    secondPageVerseRefEl.textContent = "";
+    secondPageVerseRefEl.style.display = "none";
+  }
 
   setText("galleryHeading", config.gallery.heading);
   renderDetails();

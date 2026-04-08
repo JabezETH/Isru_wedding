@@ -15,7 +15,7 @@ window.INVITATION_CONFIG = {
     heroBackgroundUrl:
       "https://images.unsplash.com/photo-1465495976277-4387d4b0d799?auto=format&fit=crop&w=1600&q=80",
     heroCoupleImageUrl:
-      "assets/photo_6_2026-04-07_12-16-06.jpg",
+      "assets/photo_4_2026-04-07_12-16-06.jpg",
     heroCoupleImageAlt: "Bride and groom portrait",
     heroCoupleImageFit: "contain",
     heroCoupleImagePosition: "center center",
@@ -25,6 +25,9 @@ window.INVITATION_CONFIG = {
   opening: {
     eyebrow: "የሰርግ ጥሪ",
     subtitle: "በሰርጋችን እንዲታደሙ በአክብሮት ጠርተኖታል!",
+    bibleVerse: "'ወደ በጉ ሰርግ እራት የተጠሩ ብፁዓን ናቸው' ራዕ 19፡9",
+    verseNote:
+      "በሰርጋችን እለት አብረን የበጉን ሰርግ የምናስብበት ቀን ይሆንልናል\nታላቁን ሰርግ በጉጉት እንጠብቃለን",
     openButtonLabel: "የጥሪ ካርዶን ይክፈቱ"
   },
   hero: {
@@ -46,7 +49,9 @@ window.INVITATION_CONFIG = {
   invitation: {
     heading: "ተጋብዘዋል!",
     body:
-      "ይህንን ቀን አብረውን እንዲያከብሩ ጠርተኖታል"
+      "ይህንን ቀን አብረውን እንዲያከብሩ ጠርተኖታል",
+    verse: "' እግዚአብሔር ብቻ መራው፤ ምንም ባዕድ አምላክ ዐብሮት አልነበረም። '",
+    verseReference: "ዘዳግም 32:12"
   },
   details: [
     {
