@@ -689,7 +689,28 @@ h2 {
     margin: 0.1rem auto 0.2rem;
     flex: 1 1 auto;
     min-height: 0;
-    max-height: min(52dvh, 480px);
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  #openingCoupleImage {
+    order: -1;
+    width: 100%;
+    height: auto;
+    max-height: min(45dvh, 420px);
+  }
+
+  .opening-verse {
+    position: static !important;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 0.25rem 0 0;
+    padding: 0.4rem 0.5rem;
+    width: auto;
+    z-index: 1;
   }
 
   h1 {
@@ -777,8 +798,15 @@ h2 {
 
   .opening-couple-wrap {
     width: min(78vw, 320px);
-    max-height: min(48dvh, 340px);
+    max-height: none;
     margin: 0.06rem auto 0.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  #openingCoupleImage {
+    max-height: min(42dvh, 300px);
   }
 
   #openInviteBtn {
