@@ -700,9 +700,9 @@ h2 {
     order: -1;
     width: 100%;
     height: auto;
-    max-height: min(55dvh, 480px);
-    object-fit: cover;
-    object-position: center top;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
   }
 
   .opening-verse {
