@@ -686,20 +686,20 @@ h2 {
 
   .opening-couple-wrap {
     width: min(85vw, 380px);
-    margin: 0.1rem auto 0.2rem;
-    flex: 1 1 auto;
+    margin: 0.08rem auto 0.12rem;
+    flex: 0 0 auto;
     min-height: 0;
     max-height: none;
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.2rem;
   }
 
   #openingCoupleImage {
     order: -1;
     width: 100%;
     height: auto;
-    max-height: min(45dvh, 420px);
+    max-height: min(40dvh, 350px);
   }
 
   .opening-verse {
@@ -707,8 +707,8 @@ h2 {
     bottom: auto;
     left: auto;
     right: auto;
-    margin: 0.25rem 0 0;
-    padding: 0.4rem 0.5rem;
+    margin: 0.15rem 0 0;
+    padding: 0.35rem 0.45rem;
     width: auto;
     z-index: 1;
   }
@@ -799,14 +799,15 @@ h2 {
   .opening-couple-wrap {
     width: min(78vw, 320px);
     max-height: none;
-    margin: 0.06rem auto 0.15rem;
+    margin: 0.05rem auto 0.08rem;
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.15rem;
+    flex: 0 0 auto;
   }
 
   #openingCoupleImage {
-    max-height: min(42dvh, 300px);
+    max-height: min(38dvh, 280px);
   }
 
   #openInviteBtn {
