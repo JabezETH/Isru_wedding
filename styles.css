@@ -407,6 +407,19 @@ h2 {
 .section {
   padding: 3.25rem 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invitation-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 10px 24px rgba(44, 24, 12, 0.08);
+  width: min(100%, 700px);
+  margin-inline: auto;
 }
 
 .section h3 {
