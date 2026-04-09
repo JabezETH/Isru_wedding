@@ -462,9 +462,11 @@ h2 {
 
 .details-grid {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .card {
@@ -476,6 +478,7 @@ h2 {
   position: relative;
   text-align: center;
   width: min(100%, 420px);
+  flex: 0 1 420px;
 }
 
 .card::after {
